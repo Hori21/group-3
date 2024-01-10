@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  text-align: center;
+  font-size: 130px;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+  margin-top: auto;
+  margin-bottom: 2%;
+  color:antiquewhite;
+}
+
+.label {
+  text-align: center;
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+  margin-bottom: -4%;
+  color:antiquewhite;
+}
+
+
+.gallery{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9){
+  .back-video{
+      width: 100%;
+      height: auto;
+  } 
+} 
+@media (max-aspect-ratio: 16/9){
+  .back-video{
+      width: auto;
+      height: 100%;
+  } 
+} 
+.img-box{
+  width: 100px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 50px;
+  background: url(Nathalie.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: width 0.5s;
+}
+.img-box:nth-child(2){
+  background: url(Ako.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.img-box:nth-child(3){
+  background: url(Arjay.png);
+  background-size: cover;
+  background-position: center;
+}
+.img-box:nth-child(4){
+  background: url(Cristina.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.img-box:nth-child(5){
+  background: url(Epifanio.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.img-box h3{
+ color: #00008B;
+ position: absolute;
+ bottom: 0;
+ left: 30px;
+ opacity: 0;
+ transition: bottom 0.5s, opacity 0.5s;
+}
+.img-box:hover{
+  width: 300px;
+  cursor: pointer;
+
+}
+.img-box:hover h3{
+ opacity: 1;
+ bottom: 25px; ;
+
+}
